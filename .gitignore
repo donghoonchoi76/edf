@@ -1,1 +1,15 @@
 Library/
+Temp/
+build/
+obj/
+
+.DS_Store
+
+*.DotSettings
+*.csproj
+*.pidb
+*.sln
+*.suo
+*.unityproj
+*.user
+*.userprefs
