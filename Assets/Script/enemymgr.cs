@@ -3,11 +3,21 @@ using System.Collections;
 
 
 public class enemymgr : MonoBehaviour {
+    public int distance = 5;
+    public int minEnemy = 5;
+    public int maxEnemy = 10;
+
+    public float interval = 0.0f;
+    private float timer = 0.0f;
+
+    private GameObject[] enemies = new GameObject[10];  
     private timer timerScript;
     private float stagetime;
 
 	// Use this for initialization
 	void Start () {
+        enemies[0] = Resources.Load("Prefabs/enemy0") as GameObject;
+
         //---------------------------------------------------------
         // Initialize External Script
         //---------------------------------------------------------
@@ -22,7 +32,31 @@ public class enemymgr : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log(timerScript.currCounter);
+        //Debug.Log(timerScript.currCounter);
+
+        //Debug.Log(GameObject.FindGameObjectsWithTag("Enemy").Length);
+
+        int numEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
+        timer -= Time.deltaTime;
+        if (timer < 0)
+        {
+
+            int num = Random.Range(minEnemy, maxEnemy + 1 - numEnemies);
+
+            for (int i = 0; i < num; i++)
+                AddEnemy(0);
+
+            timer = interval;
+        }
+        
+        
+        
+
+        if ( numEnemies < minEnemy )
+        {
+            AddEnemy(0);
+        }
+
 
         if (timerScript.currCounter >= stagetime)
         {
@@ -43,25 +77,26 @@ public class enemymgr : MonoBehaviour {
     {
         stagetime = _lastAtkTime;                      // Last Attack time
 
-        AddEnemy(0, 0);
-     
+        for (int i = 0; i < minEnemy; i++)
+        {            
+            AddEnemy(0);
+        }
 
-        //for (int i = 0; i < 30; i++)
-        //{
-        //    int appeartime = Random.Range(0, 10);
-        //    int enemytype = Random.Range(1,3);
-        //    AddEnemy(appeartime, enemytype);
-        //}
-
-        //AddRush( 60, 75, 30, 50, 1 );    // start time(seconds), end time, min number of enemy, max number of enemy, type of enemy list
-        //AddRush(120, 140, 50, 80, 2 );
-    }
-    void AddEnemy(float _appeartime, int _type)
-    {        
-        Vector3 pos = new Vector3(-1, -1, 0);
-        Instantiate(GameObject.Find("stone"), pos, Quaternion.identity);       
+        timer = interval;
     }
 
+    //-------------------------------------------------------------------
+    // 
+    //-------------------------------------------------------------------
+    void AddEnemy(int _type)
+    {
+        float theta = Random.Range(0, 181);
+        theta *= (Mathf.PI / 180);
 
+        float x = Mathf.Cos(theta) * distance;       // 1 ~ -1
+        float y = Mathf.Sin(theta) * distance;       // 0 ~ 1
+        y = (Random.Range(0, 2) == 0) ?  -y : y;
 
+        Instantiate(enemies[_type].gameObject, new Vector3(x, y, 0), Quaternion.Euler(0,0,Random.Range(0, 360)));
+    }
 }
