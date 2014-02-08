@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
-  - 114: {fileID: 11400000}
+  - 60: {fileID: 6000000}
   m_Layer: 0
   m_Name: weapon0
   m_TagString: Untagged
@@ -28,26 +28,24 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
---- !u!114 &11400000
-MonoBehaviour:
+--- !u!60 &6000000
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 977f04b3eb077bd4797126367e6fcad6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eType: 1
-  iPrice: 0
-  iMaxHP: 0
-  iCurrentHP: 0
-  fShootingInterval: 0
-  fBulletSpeed: 0
-  fRadarDistance: 0
-  fRadarAngle: 0
-  iNumBulletPerFire: 0
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Poly:
+    m_Paths:
+    - - {x: .0564965606, y: .299999982}
+      - {x: -.0914599448, y: .261459947}
+      - {x: -.299999982, y: -.0491967909}
+      - {x: -.299999982, y: -.299999982}
+      - {x: .299999982, y: -.299999982}
+      - {x: .287153304, y: -.0385400429}
+      - {x: .16072996, y: .209343225}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

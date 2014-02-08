@@ -10,8 +10,8 @@ public class targetmove : MonoBehaviour {
         float delay = Random.Range(0.01f, 3.5f);
         float spendtime = Random.Range(5.0f, 10.0f);
         iTween.MoveTo(this.gameObject, iTween.Hash("x", endpos.x, "y", endpos.y, 
-                                                     "time", spendtime, "easeType", "linear", 
-                                                     "loopType", "once", "delay", delay));
+                                                     "time", spendtime, "easeType", "linear",
+                                                     "loopType", "none", "delay", delay));
 
         iTween.RotateAdd(this.gameObject, iTween.Hash("z", 360, "easeType", "linear", "loopType", "loop", "time", 1));
 	}

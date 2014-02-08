@@ -12,12 +12,13 @@ public class slot : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-          
+        
 	}
 
     public void AttachWeapon(string objName) {
-        Destroy(weapon);
-        Debug.Log("AttachWeapon as : " + objName);
+        if (weapon != null && weapon.name.Equals(objName)) return;
+
+        DestroyImmediate(weapon, true);
         GameObject obj = (GameObject)Resources.Load("Prefabs/" + objName);
         weapon = (GameObject)Instantiate(obj, this.gameObject.transform.position, this.gameObject.transform.rotation);
         weapon.transform.parent = this.transform;
