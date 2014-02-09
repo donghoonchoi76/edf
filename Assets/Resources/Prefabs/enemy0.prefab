@@ -11,8 +11,8 @@ GameObject:
   - 212: {fileID: 21200000}
   - 114: {fileID: 11400000}
   - 114: {fileID: 11400002}
-  - 135: {fileID: 13500000}
-  - 54: {fileID: 5400000}
+  - 60: {fileID: 6000000}
+  - 50: {fileID: 5000000}
   m_Layer: 8
   m_Name: enemy0
   m_TagString: Enemy
@@ -31,21 +31,51 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
---- !u!54 &5400000
-Rigidbody:
+--- !u!50 &5000000
+Rigidbody2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_LinearDrag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
+  m_GravityScale: 0
+  m_FixedAngle: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!60 &6000000
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Poly:
+    m_Paths:
+    - - {x: .550000012, y: .0899999961}
+      - {x: .469999999, y: .219999999}
+      - {x: .370000005, y: .340000004}
+      - {x: .129999995, y: .469999999}
+      - {x: -.049999997, y: .449999988}
+      - {x: -.179999992, y: .469999999}
+      - {x: -.25, y: .469999999}
+      - {x: -.550000012, y: .219999999}
+      - {x: -.550000012, y: .129999995}
+      - {x: -.550000012, y: -.099999994}
+      - {x: -.5, y: -.319999993}
+      - {x: -.239999995, y: -.569999993}
+      - {x: -.189999998, y: -.579999983}
+      - {x: -.0199999996, y: -.610000014}
+      - {x: .189999998, y: -.610000014}
+      - {x: .25, y: -.599999964}
+      - {x: .539999962, y: -.439999998}
+      - {x: .560000002, y: -.419999987}
+      - {x: .560000002, y: -.239999995}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -73,18 +103,6 @@ MonoBehaviour:
   atk: 100
   def: 30
   killTimer: 0
---- !u!135 &13500000
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: .5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
