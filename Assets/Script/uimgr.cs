@@ -5,7 +5,8 @@ public class uimgr : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+        iTween.CameraFadeAdd();
+        iTween.CameraFadeFrom(1.0f, 0.5f);
 	}
 	
 	// Update is called once per frame
