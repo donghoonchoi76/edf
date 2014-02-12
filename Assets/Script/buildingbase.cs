@@ -20,7 +20,7 @@ public class buildingbase : MonoBehaviour {
         
 	}
 
-    protected void Clicked()
+    void Clicked()
     {
         Debug.Log("Building is clicked......");
     }

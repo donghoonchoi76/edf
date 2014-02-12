@@ -17,7 +17,8 @@ public class title : MonoBehaviour {
             mousePosition.z = 10.0f;
             Vector2 v = Camera.main.ScreenToWorldPoint(mousePosition);
             
-            Collider2D[] col = Physics2D.OverlapPointAll(v);
+            int layerMask = 1 << LayerMask.NameToLayer("UI");
+            Collider2D[] col = Physics2D.OverlapPointAll(v, layerMask);
             if (col.Length > 0)
             {
                 foreach (Collider2D c in col)
@@ -38,7 +39,7 @@ public class title : MonoBehaviour {
 
     void OnButton(bool bGameStart)
     {
-        if (bGameStart) Application.LoadLevel("Play");
+        if (bGameStart) Application.LoadLevel("MainMenu");
         else Application.Quit();
     }
 }

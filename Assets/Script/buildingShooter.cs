@@ -15,7 +15,8 @@ public class buildingShooter : buildingbase {
 	}
 	
 	// Update is called once per frame
-	protected void Update () {
+	protected void Update () 
+    {
         base.Update();
 	}
 }

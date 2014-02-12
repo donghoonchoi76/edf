@@ -266,7 +266,7 @@ GameObject:
   - 4: {fileID: 848757053}
   - 212: {fileID: 848757052}
   - 61: {fileID: 848757054}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ui_exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -329,7 +329,7 @@ GameObject:
   - 4: {fileID: 1014614409}
   - 212: {fileID: 1014614408}
   - 61: {fileID: 1014614410}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ui_start
   m_TagString: Untagged
   m_Icon: {fileID: 0}

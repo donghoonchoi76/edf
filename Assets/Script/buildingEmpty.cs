@@ -7,7 +7,7 @@ public class buildingEmpty : buildingbase {
     {
     }
 
-     protected void Update()
+    protected void Update()
     {
          base.Update();
     }
