@@ -18,7 +18,7 @@ public class enemy0 : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () {        
         if (!isDead)
             return;
 
@@ -44,14 +44,13 @@ public class enemy0 : MonoBehaviour {
         }
     }
 
-    void OnTriggerEnter(Collider col)
+    void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Earth")
+        // If it hits an enemy...
+        if (col.tag == "Earth")
         {
             GameObject explosion = Instantiate(particle, transform.position, transform.rotation) as GameObject;
-            Destroy(this.gameObject);           
-
-            col.gameObject.SendMessage("ApplyDamage", SendMessageOptions.DontRequireReceiver);
+            Destroy(this.gameObject);
         }
     }
 }

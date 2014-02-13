@@ -890,9 +890,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56cf930d4902bda4fae1c678cfca9de1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 20
-  minEnemy: 10
-  maxEnemy: 50
+  distance: 4
+  minEnemy: 1
+  maxEnemy: 1
   interval: 4
 --- !u!114 &825295735
 MonoBehaviour:
@@ -1234,7 +1234,7 @@ GameObject:
   - 4: {fileID: 1068907006}
   - 212: {fileID: 1068907005}
   - 114: {fileID: 1068907004}
-  - 135: {fileID: 1183394293}
+  - 58: {fileID: 1068907007}
   m_Layer: 8
   m_Name: earth
   m_TagString: Earth
@@ -1287,7 +1287,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1068907003}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -.0274112821, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 369600725}
@@ -1311,6 +1311,17 @@ Transform:
   - {fileID: 1017640869}
   - {fileID: 878328272}
   m_Father: {fileID: 0}
+--- !u!58 &1068907007
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1068907003}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Radius: 1.79999995
+  m_Center: {x: 0, y: 0}
 --- !u!1 &1084679141
 GameObject:
   m_ObjectHideFlags: 0
@@ -1395,18 +1406,6 @@ Prefab:
   m_RootGameObject: {fileID: 1515702281}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!135 &1183394293
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1068907003}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1.63999999
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1212433947
 Prefab:
   m_ObjectHideFlags: 0

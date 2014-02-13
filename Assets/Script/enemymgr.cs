@@ -47,10 +47,7 @@ public class enemymgr : MonoBehaviour {
                 AddEnemy(0);
 
             timer = interval;
-        }
-        
-        
-        
+        }        
 
         if ( numEnemies < minEnemy )
         {
