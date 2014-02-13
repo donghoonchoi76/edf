@@ -16,9 +16,12 @@ public class buildingbase : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-        if (Input.GetMouseButtonUp(0))
-
-            Debug.Log("Mouse up");
+	protected void Update () {
+        
 	}
+
+    void Clicked()
+    {
+        Debug.Log("Building is clicked......");
+    }
 }

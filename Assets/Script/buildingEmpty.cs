@@ -2,19 +2,13 @@
 using System.Collections;
 
 [System.Serializable]
-public class buildingEmpty : buildingbase
-{
+public class buildingEmpty : buildingbase {
     void Start()
     {
     }
 
-    void Update()
+    protected void Update()
     {
-        
-    }
-
-    void OnMouseUp()
-    {
-        Debug.Log("Drag ended!");
+         base.Update();
     }
 }

@@ -46,7 +46,6 @@ public class enemy0 : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        // If it hits an enemy...
         if (col.tag == "Earth")
         {
             GameObject explosion = Instantiate(particle, transform.position, transform.rotation) as GameObject;
