@@ -3,11 +3,11 @@ using System.Collections;
 
 [System.Serializable]
 public class buildingbase : MonoBehaviour {
-    public enum BuildingType { empty, shooter, defender };
+    public enum BuildingType { empty, shooter, miner };
     public BuildingType eType;
     public int iPrice;
-    public int iMaxHP;
-    public int iCurrentHP;
+    public int iHP;
+    public int iDef;
 
 
 	// Use this for initialization
@@ -16,7 +16,7 @@ public class buildingbase : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	protected void Update () {
+	protected virtual void Update () {
         
 	}
 

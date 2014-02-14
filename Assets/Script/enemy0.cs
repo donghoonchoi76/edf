@@ -51,5 +51,11 @@ public class enemy0 : MonoBehaviour {
             GameObject explosion = Instantiate(particle, transform.position, transform.rotation) as GameObject;
             Destroy(this.gameObject);
         }
+        if (col.tag.Equals("Bullet"))
+        {
+            Damage(col.gameObject.GetComponent<bulletbase>().atk);
+            Destroy(col.gameObject);
+            GameObject explosion = Instantiate(particle, transform.position, transform.rotation) as GameObject;
+        }
     }
 }

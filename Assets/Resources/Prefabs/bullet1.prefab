@@ -12,7 +12,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 60: {fileID: 6000000}
   m_Layer: 0
-  m_Name: bullet0
+  m_Name: bullet1
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52,11 +52,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90085416fbdc78c408f0d071777ffb1f, type: 3}
+  m_Script: {fileID: 11500000, guid: 39147e6113305cf4180f38424d50f8be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   atk: 50
-  fSpeed: 5
+  fSpeed: 3
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

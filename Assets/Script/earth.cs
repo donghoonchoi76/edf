@@ -26,7 +26,7 @@ public class earth : MonoBehaviour {
 
 
         iCurrentHP = 100;
-        iTween.RotateBy(gameObject, iTween.Hash("z", 90, "speed", 20, "loopType", "loop", "easeType", "linear", "delay", 0));
+        iTween.RotateBy(gameObject, iTween.Hash("z", 90, "speed", 20, "loopType", "loop", "easeType", "linear"));
 	}
 	
 	// Update is called once per frame

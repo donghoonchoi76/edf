@@ -60,13 +60,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eType: 1
   iPrice: 0
-  iMaxHP: 0
-  iCurrentHP: 0
-  fShootingInterval: 0
-  fBulletSpeed: 0
-  fRadarDistance: 0
-  fRadarAngle: 0
-  iNumBulletPerFire: 0
+  iHP: 0
+  iDef: 0
+  eShooterType: 2
+  fShootingInterval: 2
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -88,7 +85,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300000, guid: f73f65eb39d301547a16f689850043c2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 229b5d6ef9f80a94895fa91cecbea4c4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

@@ -9,11 +9,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
-  - 114: {fileID: 11400000}
   - 60: {fileID: 6000000}
+  - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: bullet0
-  m_TagString: Bullet
+  m_Name: weapon1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,13 +37,16 @@ PolygonCollider2D:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Poly:
     m_Paths:
-    - - {x: -.0249999985, y: .0249999985}
-      - {x: -.0249999985, y: -.0249999985}
-      - {x: .0249999985, y: -.0249999985}
-      - {x: .0249999985, y: .0249999985}
+    - - {x: .0564965606, y: .299999982}
+      - {x: -.0914599448, y: .261459947}
+      - {x: -.299999982, y: -.0491967909}
+      - {x: -.299999982, y: -.299999982}
+      - {x: .299999982, y: -.299999982}
+      - {x: .287153304, y: -.0385400429}
+      - {x: .16072996, y: .209343225}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -52,11 +55,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90085416fbdc78c408f0d071777ffb1f, type: 3}
+  m_Script: {fileID: 11500000, guid: 977f04b3eb077bd4797126367e6fcad6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atk: 50
-  fSpeed: 5
+  eType: 1
+  iPrice: 0
+  iHP: 0
+  iDef: 0
+  eShooterType: 1
+  fShootingInterval: 1
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -78,7 +85,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300000, guid: 527baa62e0c8a444fbd511d07d212834, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1d062a12a22e5f74ea494cd673e69f05, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

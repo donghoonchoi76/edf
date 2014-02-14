@@ -86,7 +86,7 @@ GameObject:
   - 61: {fileID: 18648526}
   m_Layer: 10
   m_Name: slot16
-  m_TagString: slot
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -166,6 +166,10 @@ Prefab:
       propertyPath: m_Name
       value: slot15
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
+      propertyPath: m_TagString
+      value: Slot
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
   m_RootGameObject: {fileID: 359862433}
@@ -183,7 +187,7 @@ GameObject:
   - 61: {fileID: 265855015}
   m_Layer: 10
   m_Name: slot3
-  m_TagString: slot
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -236,7 +240,7 @@ GameObject:
   - 61: {fileID: 359862435}
   m_Layer: 10
   m_Name: slot15
-  m_TagString: slot
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -289,7 +293,7 @@ GameObject:
   - 61: {fileID: 369600727}
   m_Layer: 10
   m_Name: slot0
-  m_TagString: slot
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -342,7 +346,7 @@ GameObject:
   - 61: {fileID: 523269112}
   m_Layer: 10
   m_Name: slot11
-  m_TagString: slot
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -422,6 +426,10 @@ Prefab:
       propertyPath: m_Name
       value: slot7
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
+      propertyPath: m_TagString
+      value: Slot
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
@@ -467,6 +475,10 @@ Prefab:
       propertyPath: m_Name
       value: slot19
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
+      propertyPath: m_TagString
+      value: Slot
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
   m_RootGameObject: {fileID: 878328271}
@@ -511,6 +523,10 @@ Prefab:
       propertyPath: m_Name
       value: slot18
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
+      propertyPath: m_TagString
+      value: Slot
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
   m_RootGameObject: {fileID: 1017640868}
@@ -528,7 +544,7 @@ GameObject:
   - 61: {fileID: 627761555}
   m_Layer: 10
   m_Name: slot6
-  m_TagString: slot
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -608,6 +624,10 @@ Prefab:
       propertyPath: m_Name
       value: slot4
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
+      propertyPath: m_TagString
+      value: Slot
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
   m_RootGameObject: {fileID: 1324843571}
@@ -625,7 +645,7 @@ GameObject:
   - 61: {fileID: 790541919}
   m_Layer: 10
   m_Name: slot5
-  m_TagString: slot
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -705,6 +725,10 @@ Prefab:
       propertyPath: m_Name
       value: slot5
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
+      propertyPath: m_TagString
+      value: Slot
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
   m_RootGameObject: {fileID: 790541916}
@@ -777,7 +801,7 @@ GameObject:
   - 61: {fileID: 878328274}
   m_Layer: 10
   m_Name: slot19
-  m_TagString: slot
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -857,6 +881,10 @@ Prefab:
       propertyPath: m_Name
       value: slot12
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
+      propertyPath: m_TagString
+      value: Slot
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
   m_RootGameObject: {fileID: 1386514195}
@@ -905,6 +933,10 @@ Prefab:
       propertyPath: weapon
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
+      propertyPath: m_TagString
+      value: Slot
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
     - {fileID: 0}
@@ -952,6 +984,10 @@ Prefab:
       propertyPath: m_Name
       value: slot1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
+      propertyPath: m_TagString
+      value: Slot
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
   m_RootGameObject: {fileID: 1437486037}
@@ -969,7 +1005,7 @@ GameObject:
   - 61: {fileID: 1017640870}
   m_Layer: 10
   m_Name: slot18
-  m_TagString: slot
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1049,6 +1085,10 @@ Prefab:
       propertyPath: m_Name
       value: slot2
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
+      propertyPath: m_TagString
+      value: Slot
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
   m_RootGameObject: {fileID: 2068048660}
@@ -1092,6 +1132,10 @@ Prefab:
     - target: {fileID: 100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
       propertyPath: m_Name
       value: slot3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
+      propertyPath: m_TagString
+      value: Slot
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
@@ -1161,7 +1205,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1068907003}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.0274112821, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 369600725}
@@ -1208,7 +1252,7 @@ GameObject:
   - 61: {fileID: 1084679144}
   m_Layer: 10
   m_Name: slot7
-  m_TagString: slot
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1288,6 +1332,10 @@ Prefab:
       propertyPath: m_Name
       value: slot14
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
+      propertyPath: m_TagString
+      value: Slot
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
   m_RootGameObject: {fileID: 1515702281}
@@ -1332,6 +1380,10 @@ Prefab:
       propertyPath: m_Name
       value: slot16
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
+      propertyPath: m_TagString
+      value: Slot
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
   m_RootGameObject: {fileID: 18648523}
@@ -1349,7 +1401,7 @@ GameObject:
   - 61: {fileID: 1324843574}
   m_Layer: 10
   m_Name: slot4
-  m_TagString: slot
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1452,7 +1504,7 @@ GameObject:
   - 61: {fileID: 1336427914}
   m_Layer: 10
   m_Name: slot17
-  m_TagString: slot
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1505,7 +1557,7 @@ GameObject:
   - 61: {fileID: 1386514198}
   m_Layer: 10
   m_Name: slot12
-  m_TagString: slot
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1558,7 +1610,7 @@ GameObject:
   - 61: {fileID: 1437486040}
   m_Layer: 10
   m_Name: slot1
-  m_TagString: slot
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1611,7 +1663,7 @@ GameObject:
   - 61: {fileID: 1500786305}
   m_Layer: 10
   m_Name: slot9
-  m_TagString: slot
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1664,7 +1716,7 @@ GameObject:
   - 61: {fileID: 1515702284}
   m_Layer: 10
   m_Name: slot14
-  m_TagString: slot
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1717,7 +1769,7 @@ GameObject:
   - 61: {fileID: 1553265587}
   m_Layer: 10
   m_Name: slot8
-  m_TagString: slot
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1770,7 +1822,7 @@ GameObject:
   - 61: {fileID: 1560956825}
   m_Layer: 10
   m_Name: slot10
-  m_TagString: slot
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1849,6 +1901,10 @@ Prefab:
     - target: {fileID: 100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
       propertyPath: m_Name
       value: slot13
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
+      propertyPath: m_TagString
+      value: Slot
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
@@ -1932,6 +1988,10 @@ Prefab:
       propertyPath: m_Name
       value: slot17
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
+      propertyPath: m_TagString
+      value: Slot
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
   m_RootGameObject: {fileID: 1336427911}
@@ -1975,6 +2035,10 @@ Prefab:
     - target: {fileID: 100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
       propertyPath: m_Name
       value: slot8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
+      propertyPath: m_TagString
+      value: Slot
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
@@ -2020,6 +2084,10 @@ Prefab:
       propertyPath: m_Name
       value: slot11
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
+      propertyPath: m_TagString
+      value: Slot
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
   m_RootGameObject: {fileID: 523269109}
@@ -2037,7 +2105,7 @@ GameObject:
   - 61: {fileID: 2007459699}
   m_Layer: 10
   m_Name: slot13
-  m_TagString: slot
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2116,6 +2184,10 @@ Prefab:
     - target: {fileID: 100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
       propertyPath: m_Name
       value: slot10
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
+      propertyPath: m_TagString
+      value: Slot
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
@@ -2214,7 +2286,7 @@ GameObject:
   - 61: {fileID: 2068048663}
   m_Layer: 10
   m_Name: slot2
-  m_TagString: slot
+  m_TagString: Slot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2294,6 +2366,10 @@ Prefab:
       propertyPath: m_Name
       value: slot9
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
+      propertyPath: m_TagString
+      value: Slot
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
   m_RootGameObject: {fileID: 1500786302}
@@ -2337,6 +2413,10 @@ Prefab:
     - target: {fileID: 100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
       propertyPath: m_Name
       value: slot6
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fff2c6f498069bf4796fa751cc308f80, type: 2}
+      propertyPath: m_TagString
+      value: Slot
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
