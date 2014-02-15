@@ -4,12 +4,8 @@ using System.Collections;
 [System.Serializable]
 public class earth : MonoBehaviour {
     public const int MAX_SLOT = 20;
-
-    public int iMaxHP;
-    public int iCurrentHP;
-    public int iMoney;
-    public int iMoneyPerSec;
-
+    public int hp;
+    
 	// Use this for initialization
 	void Start () {
         GameObject slot = GameObject.Find("slot0");
@@ -25,7 +21,7 @@ public class earth : MonoBehaviour {
         }
 
 
-        iCurrentHP = 100;
+        hp = 100;
         iTween.RotateBy(gameObject, iTween.Hash("z", 90, "speed", 20, "loopType", "loop", "easeType", "linear"));
 	}
 	

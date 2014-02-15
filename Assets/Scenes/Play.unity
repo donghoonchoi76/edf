@@ -164,7 +164,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_SortingLayerID: 0
   m_Sprite: {fileID: 21300000, guid: bd0a52a41712d6847a4f252e2f3f429b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -317,7 +317,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_SortingLayerID: 0
   m_Sprite: {fileID: 21300000, guid: 5ae86e449d8488a499894b70a8f30409, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -435,7 +435,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_SortingLayerID: 0
   m_Sprite: {fileID: 21300000, guid: df4764c557731064db01085711cee686, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -618,7 +618,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_SortingLayerID: 0
   m_Sprite: {fileID: 21300000, guid: 5ae86e449d8488a499894b70a8f30409, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1127,7 +1127,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_SortingLayerID: 0
   m_Sprite: {fileID: 21300000, guid: da165d5117972bc428708f318e490e60, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1540,10 +1540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53026d84d8c481d4eb2050fb5f4e6440, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iMaxHP: 0
-  iCurrentHP: 0
-  iMoney: 0
-  iMoneyPerSec: 0
+  hp: 0
 --- !u!212 &1068907005
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1861,7 +1858,7 @@ Transform:
   m_LocalPosition: {x: .5, y: .993223667, z: 0}
   m_LocalScale: {x: .5, y: .5, z: 2}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1614027285}
 --- !u!1 &1336427911
 GameObject:
   m_ObjectHideFlags: 0
@@ -2408,6 +2405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc4c40227f5b7fa4799891c764849913, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  money: 1000
 --- !u!4 &1614027285
 Transform:
   m_ObjectHideFlags: 0
@@ -2419,6 +2417,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 129963127}
+  - {fileID: 1328022675}
   m_Father: {fileID: 0}
 --- !u!1 &1716308560
 GameObject:

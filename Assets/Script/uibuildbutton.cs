@@ -50,7 +50,7 @@ public class uibuildbutton : MonoBehaviour {
         if (buildName.Equals(NO_BUILDING_NAME)) return;
 
         selSlot.AttachWeapon(buildName);
-        earth e = GameObject.Find("earth").GetComponent<earth>();
-        e.iMoney += cost;
+        uimgr uiMgr = GameObject.Find("UIManager").GetComponent<uimgr>();
+        uiMgr.money -= cost;
     }
 }

@@ -4,6 +4,7 @@ using System.Collections;
 public class uimgr : MonoBehaviour {
     public const int MAX_NEXT_BUILDING = 2;
     private string selSlotName;
+    public int money;
 
 	// Use this for initialization
 	void Start () {
