@@ -13,7 +13,7 @@ GameObject:
   - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: weapon0
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62,6 +62,9 @@ MonoBehaviour:
   iPrice: 0
   iHP: 0
   iDef: 0
+  nextBuildingName:
+  - 
+  - 
   eShooterType: 2
   fShootingInterval: 2
 --- !u!212 &21200000
@@ -82,9 +85,9 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
+  m_SortingLayer: 3
   m_SortingOrder: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 3856920399
   m_Sprite: {fileID: 21300000, guid: 229b5d6ef9f80a94895fa91cecbea4c4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000

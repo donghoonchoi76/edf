@@ -13,7 +13,7 @@ GameObject:
   - 65: {fileID: 6500000}
   m_Layer: 0
   m_Name: buildingEmpty
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53,9 +53,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eType: 0
-  iPrice: 0
-  iMaxHP: 0
-  iCurrentHP: 0
+  iPrice: 100
+  iHP: 0
+  iDef: 0
+  nextBuildingName:
+  - weapon0
+  - weapon1
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -74,9 +77,9 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
+  m_SortingLayer: 3
   m_SortingOrder: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 3856920399
   m_Sprite: {fileID: 21300000, guid: 703352ab9f2ca0048a17fde9090c6d41, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000

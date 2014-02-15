@@ -8,7 +8,8 @@ public class buildingbase : MonoBehaviour {
     public int iPrice;
     public int iHP;
     public int iDef;
-
+    public string[] nextBuildingName = new string[uimgr.MAX_NEXT_BUILDING];
+    
 
 	// Use this for initialization
 	void Start () {
@@ -19,9 +20,4 @@ public class buildingbase : MonoBehaviour {
 	protected virtual void Update () {
         
 	}
-
-    void Clicked()
-    {
-        Debug.Log("Building is clicked......");
-    }
 }
