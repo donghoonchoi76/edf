@@ -53,12 +53,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eType: 0
-  iPrice: 100
+  iPrice: 0
   iHP: 0
   iDef: 0
   nextBuildingName:
   - weapon0
-  - weapon1
+  - miner0
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

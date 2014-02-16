@@ -49,8 +49,16 @@ public class uibuildbutton : MonoBehaviour {
     {
         if (buildName.Equals(NO_BUILDING_NAME)) return;
 
-        selSlot.AttachWeapon(buildName);
         uimgr uiMgr = GameObject.Find("UIManager").GetComponent<uimgr>();
-        uiMgr.money -= cost;
+        float currMoney = uiMgr.GetMoney();
+
+        if (cost > currMoney)
+        {
+            uiMgr.SetMessage("Lack of money"); 
+            return;
+        }
+
+        selSlot.AttachWeapon(buildName);
+        uiMgr.SetMoney(currMoney - (float)cost);
     }
 }

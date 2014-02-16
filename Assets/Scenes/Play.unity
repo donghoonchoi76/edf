@@ -1540,7 +1540,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53026d84d8c481d4eb2050fb5f4e6440, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 0
 --- !u!212 &1068907005
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1660,6 +1659,68 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: .600000024, y: .600000024}
   m_Center: {x: 0, y: 0}
+--- !u!1 &1142168429
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1142168430}
+  - 132: {fileID: 1142168432}
+  - 114: {fileID: 1142168431}
+  m_Layer: 0
+  m_Name: UI_Message
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1142168430
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1142168429}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .5, y: .937898993, z: 0}
+  m_LocalScale: {x: .5, y: .5, z: 2}
+  m_Children: []
+  m_Father: {fileID: 1614027285}
+--- !u!114 &1142168431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1142168429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e81f5fec8299e8e4dbdf04e75512df7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!132 &1142168432
+GUIText:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1142168429}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: 
+  m_Anchor: 1
+  m_Alignment: 1
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 18
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4278190335
+  m_PixelCorrect: 0
+  m_RichText: 1
 --- !u!1001 &1156107817
 Prefab:
   m_ObjectHideFlags: 0
@@ -2405,7 +2466,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc4c40227f5b7fa4799891c764849913, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  money: 1000
 --- !u!4 &1614027285
 Transform:
   m_ObjectHideFlags: 0
@@ -2418,6 +2478,7 @@ Transform:
   m_Children:
   - {fileID: 129963127}
   - {fileID: 1328022675}
+  - {fileID: 1142168430}
   m_Father: {fileID: 0}
 --- !u!1 &1716308560
 GameObject:

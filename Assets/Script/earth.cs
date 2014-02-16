@@ -4,7 +4,8 @@ using System.Collections;
 [System.Serializable]
 public class earth : MonoBehaviour {
     public const int MAX_SLOT = 20;
-    public int hp;
+    
+    int hp;
     
 	// Use this for initialization
 	void Start () {
@@ -24,6 +25,20 @@ public class earth : MonoBehaviour {
         hp = 100;
         iTween.RotateBy(gameObject, iTween.Hash("z", 90, "speed", 20, "loopType", "loop", "easeType", "linear"));
 	}
+
+    public int GetHP()
+    {
+        return hp;
+    }
+
+    public void SetHP(int _hp)
+    {
+        hp = _hp;
+
+        GameObject obj = GameObject.Find("UIManager");
+        uimgr ui = obj.GetComponent<uimgr>();
+        ui.SetUpdateUIMoneyHP();
+    }
 	
 	// Update is called once per frame
 	void Update () 

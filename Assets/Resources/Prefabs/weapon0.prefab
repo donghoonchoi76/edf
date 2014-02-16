@@ -58,13 +58,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eType: 1
-  iPrice: 0
+  iPrice: 100
   iHP: 0
   iDef: 0
   nextBuildingName:
-  - 
-  - 
-  eShooterType: 2
+  - weapon1
+  - weapon2
+  eShooterType: 0
   fShootingInterval: 2
 --- !u!212 &21200000
 SpriteRenderer:

@@ -3,8 +3,12 @@ using System.Collections;
 
 public class uimgr : MonoBehaviour {
     public const int MAX_NEXT_BUILDING = 2;
-    private string selSlotName;
-    public int money;
+    public const float MONEY_PER_SEC = 10.0f;
+    
+    string selSlotName = "";
+    float money = 100;
+   
+    bool bUpdateUIMoneyHP;
 
 	// Use this for initialization
 	void Start () {
@@ -15,7 +19,44 @@ public class uimgr : MonoBehaviour {
         iTween.CameraFadeFrom(1.0f, 0.5f);
 
         ShowUIBuild(false, null);
+        bUpdateUIMoneyHP = true;
 	}
+
+    public void SetMessage(string str) 
+    {
+        Transform tr = transform.FindChild("UI_Message");
+        tr.GetComponent<uiMessage>().SetText(str);
+    }
+
+    public void SetUpdateUIMoneyHP() { bUpdateUIMoneyHP = true; }
+    public float GetMoney() { return money; }
+
+    public void SetMoney(float _money)
+    {
+        money = _money;
+        bUpdateUIMoneyHP = true;
+    }
+
+    void UpdateUIMoneyHP()
+    {
+        int iPrevMoney = (int)(money * 0.1f);
+        money += (Time.deltaTime * MONEY_PER_SEC);
+        int iCurrMoney = (int)(money * 0.1f);
+        if (iPrevMoney != iCurrMoney) bUpdateUIMoneyHP = true;
+
+        if (bUpdateUIMoneyHP == false) return;
+        iCurrMoney *= 10;
+
+        GameObject obj = GameObject.Find("earth");
+        earth e = obj.GetComponent<earth>();
+        int _hp = e.GetHP();
+
+        Transform tr = transform.FindChild("UI_MoneyHP");
+
+        tr.guiText.text = "$:" + iCurrMoney + " HP:" + _hp + "%";
+
+        bUpdateUIMoneyHP = false;
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -57,13 +98,15 @@ public class uimgr : MonoBehaviour {
             }
             else ShowUIBuild(false, null);
         }
+
+        UpdateUIMoneyHP();
 	}
 
     void ShowUIBuild(bool bShow, string slotName)
     {
         if (slotName == null) bShow = false;
 
-        Transform uiBuild = gameObject.transform.FindChild("UI_BUILD");
+        Transform uiBuild = transform.FindChild("UI_BUILD");
         permanentvariable.ToggleVisibility(uiBuild, bShow);
         GameObject tagSlot = GameObject.Find("build_tag");
         if(tagSlot != null) tagSlot.renderer.enabled = bShow;
