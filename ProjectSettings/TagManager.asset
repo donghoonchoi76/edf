@@ -5,11 +5,14 @@ TagManager:
   tags:
   - Bullet
   - Earth
-  - Building
+  - Shield
   - Enemy
   - Slot
+  - Building
   - 
+  - slot
   - BtnBuild
+  - FxTemporaire
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
@@ -22,8 +25,8 @@ TagManager:
   User Layer 8: earth
   User Layer 9: Enemy
   User Layer 10: UI
-  User Layer 11: 
-  User Layer 12: 
+  User Layer 11: Effect
+  User Layer 12: BG
   User Layer 13: 
   User Layer 14: 
   User Layer 15: 
@@ -48,6 +51,10 @@ TagManager:
     userID: 0
     uniqueID: 0
     locked: 0
+  - name: Shield
+    userID: 3
+    uniqueID: 1341774815
+    locked: 0
   - name: earth
     userID: 2
     uniqueID: 1528660229
@@ -56,6 +63,9 @@ TagManager:
     userID: 1
     uniqueID: 3218860695
     locked: 0
+  - name: Effect
+    userID: 4
+    uniqueID: 1153990939
   - name: UI
     userID: 3
     uniqueID: 3856920399

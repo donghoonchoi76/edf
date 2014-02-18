@@ -69,7 +69,7 @@ EllipsoidParticleEmitter:
   m_Enabled: 1
   m_Emit: 1
   minSize: 1
-  maxSize: 2
+  maxSize: 1.5
   minEnergy: .5
   maxEnergy: .899999976
   minEmission: 30

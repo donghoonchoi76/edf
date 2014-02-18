@@ -71,6 +71,7 @@ public class buildingShooter : buildingbase {
 
                     GameObject bullet = (GameObject)Resources.Load("Prefabs/bullet0");
                     Instantiate(bullet, this.gameObject.transform.position, this.gameObject.transform.rotation * q);
+                    break;
                 }
             }
         }

@@ -44,6 +44,10 @@ public class bullet1 : bulletbase
 
         if (objList.Length > 0)
         {
+            Array.Sort(objList, delegate(GameObject obj1, GameObject obj2) {
+                return (int)(((obj1.transform.position - gameObject.transform.position).sqrMagnitude * 10.0f) - ((obj2.transform.position - gameObject.transform.position).sqrMagnitude * 10.0f));
+            });
+
             GameObject objTarget = objList[0];
             p = objTarget.transform.position - gameObject.transform.position;
             Vector3 currDir = gameObject.transform.rotation * new Vector3(0, 1, 0);

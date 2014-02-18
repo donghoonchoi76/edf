@@ -16,4 +16,21 @@ public class bulletbase : MonoBehaviour {
             Destroy(gameObject);
         }
 	}
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        /*
+if (col.tag.Equals("Bullet"))
+        {
+            Damage(col.gameObject.GetComponent<bulletbase>().atk);
+            Destroy(col.gameObject);
+            GameObject explosion = Instantiate(particle, transform.position, transform.rotation) as GameObject;
+        }
+*/
+        if (col.tag == "Enemy")
+        {
+            col.gameObject.SendMessage("ApplyDamageByBullet", atk);
+            Destroy(gameObject);
+        }
+    }
 }
