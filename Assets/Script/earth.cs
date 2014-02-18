@@ -33,4 +33,17 @@ public class earth : MonoBehaviour {
 	void Update () 
     {
     }
+
+    void Damage(int _atk)
+    {
+        
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.tag == "Enemy")
+        {
+            col.gameObject.SendMessage("ApplyDamageByEarth", 100000);      
+        }
+    }
 }

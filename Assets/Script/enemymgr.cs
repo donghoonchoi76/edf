@@ -10,7 +10,7 @@ public class enemymgr : MonoBehaviour {
     public float interval = 0.0f;
     private float timer = 0.0f;
 
-    private GameObject[] enemies = new GameObject[10];  
+    private GameObject[] enemies = new GameObject[10];          // Each type of Enemies
     private timer timerScript;
     private float stagetime;
 
@@ -32,27 +32,29 @@ public class enemymgr : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //Debug.Log(timerScript.currCounter);
-
-        //Debug.Log(GameObject.FindGameObjectsWithTag("Enemy").Length);
-
         int numEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
+
         timer -= Time.deltaTime;
         if (timer < 0)
         {
+            int minRange = minEnemy;
+            int maxRange = maxEnemy;
 
-            int num = Random.Range(minEnemy, maxEnemy + 1 - numEnemies);
-
-            for (int i = 0; i < num; i++)
-                AddEnemy(0);
+            if (numEnemies < minEnemy)
+            {
+                minRange = minEnemy - numEnemies;
+                int num = Random.Range(minRange, maxRange + 1);
+                for (int i = 0; i < num; i++)
+                    AddEnemy(0);
+            }            
 
             timer = interval;
         }        
 
-        if ( numEnemies < minEnemy )
-        {
-            AddEnemy(0);
-        }
+        //if ( numEnemies < minEnemy )
+        //{
+        //    AddEnemy(0);
+        //}
 
 
         if (timerScript.currCounter >= stagetime)
