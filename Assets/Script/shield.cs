@@ -27,7 +27,6 @@ public class shield : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Regenerate(isRecoveryMode);
-        Debug.Log(currHP);
 
         int maxStep = 10;
         float gradation = maxHP/maxStep;
@@ -116,4 +115,16 @@ public class shield : MonoBehaviour {
             col2D.enabled = true;
         }        
     }
+
+    public void GameStart()
+    {
+        enabled = true;
+    }
+
+    public void GameOver()
+    {
+        enabled = false;
+        Debug.Log("Shield : Game Over");
+    }
+
 }

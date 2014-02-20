@@ -29,6 +29,9 @@ if (col.tag.Equals("Bullet"))
 */
         if (col.tag == "Enemy")
         {
+            float teki = col.gameObject.GetComponent<enemybase>().score;
+            GameObject.Find("UIManager").GetComponent<uimgr>().UpdateScore(teki);
+
             col.gameObject.SendMessage("ApplyDamageByBullet", atk);
             Destroy(gameObject);
         }

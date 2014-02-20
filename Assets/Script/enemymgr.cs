@@ -51,12 +51,6 @@ public class enemymgr : MonoBehaviour {
             timer = interval;
         }        
 
-        //if ( numEnemies < minEnemy )
-        //{
-        //    AddEnemy(0);
-        //}
-
-
         if (timerScript.currCounter >= stagetime)
         {
             Debug.Log("Game is Over");
@@ -96,6 +90,20 @@ public class enemymgr : MonoBehaviour {
         float y = Mathf.Sin(theta) * distance;       // 0 ~ 1
         y = (Random.Range(0, 2) == 0) ?  -y : y;
 
-        Instantiate(enemies[_type].gameObject, new Vector3(x, y, 0), Quaternion.Euler(0,0,Random.Range(0, 360)));
+        GameObject obj = Instantiate(enemies[_type].gameObject, new Vector3(x, y, 0), Quaternion.Euler(0, 0, Random.Range(0, 360))) as GameObject;
+        obj.transform.parent = this.transform;
     }
+
+    public void GameStart()
+    {
+        enabled = true;
+    }
+
+    public void GameOver()
+    {
+        Debug.Log("EnemyMGR : Game Over");
+
+        enabled = false;        
+    }
+
 }

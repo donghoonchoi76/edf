@@ -20,4 +20,10 @@ public class buildingbase : MonoBehaviour {
 	protected virtual void Update () {
         
 	}
+
+    public virtual void GameOver()
+    {
+        Debug.Log("Building Base Gameover");
+        enabled = false;        
+    }
 }

@@ -14,4 +14,14 @@ public class enemybase : MonoBehaviour {
     public float hp;
     public float atk;
     public float def;
+
+    public float score;
+    
+    public virtual void GameOver()
+    {
+        Debug.Log("Enemy Base Gameover");
+        DestroyByEvent();
+        enabled = false;
+    }
+    public virtual void DestroyByEvent() { }
 }

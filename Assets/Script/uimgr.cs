@@ -4,9 +4,11 @@ using System.Collections;
 public class uimgr : MonoBehaviour {
     public const int MAX_NEXT_BUILDING = 2;
     public const float MONEY_PER_SEC = 10.0f;
+    public bool bGameOver = false;
     
     string selSlotName = "";
     float money = 100;
+    float score = 0;
    
     bool bUpdateUIMoneyHP;
 
@@ -18,6 +20,7 @@ public class uimgr : MonoBehaviour {
         iTween.CameraFadeAdd();
         iTween.CameraFadeFrom(1.0f, 0.5f);
 
+        GameStart();
         ShowUIBuild(false, null);
         bUpdateUIMoneyHP = true;
 	}
@@ -37,16 +40,31 @@ public class uimgr : MonoBehaviour {
         bUpdateUIMoneyHP = true;
     }
 
+    public void UpdateScore(float _addScore)
+    {
+        score += _addScore;
+        Transform tr = transform.FindChild("score");
+        tr.guiText.text = "score:" + score;
+    }
+
     void UpdateUIMoneyHP()
     {
+        int iCurrMoney = 0;
+        if (bGameOver)
+        {
+            transform.FindChild("UI_MoneyHP").guiText.text = "";
+            bUpdateUIMoneyHP = false;
+            return;
+        }
+
         int iPrevMoney = (int)(money * 0.1f);
         money += (Time.deltaTime * MONEY_PER_SEC);
-        int iCurrMoney = (int)(money * 0.1f);
+        iCurrMoney = (int)(money * 0.1f);
         if (iPrevMoney != iCurrMoney) bUpdateUIMoneyHP = true;
 
         if (bUpdateUIMoneyHP == false) return;
         iCurrMoney *= 10;
-
+        
         GameObject obj = GameObject.Find("earth");
         earth e = obj.GetComponent<earth>();
         int _hp = e.GetHP();
@@ -57,9 +75,15 @@ public class uimgr : MonoBehaviour {
 
         bUpdateUIMoneyHP = false;
     }
-	
+
 	// Update is called once per frame
 	void Update () {
+        if (bGameOver)
+        {
+
+            return;
+        }
+
         GameObject selSlot = null;
         if (selSlotName != null) selSlot = GameObject.Find(selSlotName);
         if(selSlot == null) ShowUIBuild(false, null);
@@ -100,6 +124,7 @@ public class uimgr : MonoBehaviour {
         }
 
         UpdateUIMoneyHP();
+        
 	}
 
     void ShowUIBuild(bool bShow, string slotName)
@@ -166,5 +191,35 @@ public class uimgr : MonoBehaviour {
                 }
             }
         }
+    }
+
+    public void GameStart()
+    {
+        bGameOver = false;
+        transform.FindChild("Result").FindChild("result_score").guiText.text = "";
+        //enabled = true;
+    }
+    public void GameOver()
+    {
+        bGameOver = true;
+        UpdateUIMoneyHP();
+        transform.FindChild("score").guiText.text = "";
+        StartCoroutine(WaitCoroutine());
+        
+        //enabled = false;
+    }
+
+    IEnumerator WaitCoroutine()
+    {
+        yield return new WaitForSeconds(1.5f);     
+        transform.FindChild("Result").FindChild("result_score").guiText.text = "Score : " + score;
+
+        yield return new WaitForSeconds(1);
+        transform.FindChild("Result").FindChild("result_score").guiText.text = "Click to Start";
+        while (!Input.GetButtonDown("Fire1"))
+        {
+            yield return new WaitForFixedUpdate();
+        }
+        Application.LoadLevel("MainMenu");    
     }
 }

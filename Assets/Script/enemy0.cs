@@ -17,7 +17,6 @@ public class enemy0 : enemybase {
     private float delay;
     private float spendTime;
 
-
 	// Use this for initialization
 	void Start () {
         eType = EnemyType.meteorS; 
@@ -46,7 +45,7 @@ public class enemy0 : enemybase {
 
         if (Input.GetButtonDown("Fire1"))
         {
-            ApplyDamageByBullet(15);            
+        //  ApplyDamageByBullet(15);            
         }
 	}
 
@@ -72,7 +71,7 @@ public class enemy0 : enemybase {
             iTween.Stop(this.gameObject);
             iTween.MoveTo(this.gameObject, iTween.Hash("x", transform.position.x * 1.1, "y", transform.position.y * 1.1,
                                                         "time", killTimer, "easeType", "linear",
-                                                        "loopType", "once", "oncomplete", "DestroyInSpace"));
+                                                        "loopType", "none", "oncomplete", "DestroyInSpace"));
         }
         // Hit Effect
         GameObject hit = Instantiate(particleHit, transform.position, transform.rotation) as GameObject;
@@ -108,7 +107,12 @@ public class enemy0 : enemybase {
     // When enemy touch Earth, destroy right now!
     void ApplyDamageByEarth()
     {
-        Destroy();
+        GameObject explosion = Instantiate(particle, transform.position, transform.rotation) as GameObject;
+        Destroy(this.gameObject);
+
+        GameObject obj = GameObject.Find("earth");
+        earth myEarth = obj.GetComponent<earth>();
+        myEarth.ApplyDamage(atk);
     }
 
 
@@ -119,8 +123,9 @@ public class enemy0 : enemybase {
         Destroy(this.gameObject);
     }
 
+
     // Destroy with particle Righ now!
-    void Destroy()
+    public override void DestroyByEvent()
     {
         GameObject explosion = Instantiate(particle, transform.position, transform.rotation) as GameObject;
         Destroy(this.gameObject);

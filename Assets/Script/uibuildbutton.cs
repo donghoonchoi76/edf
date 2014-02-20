@@ -61,4 +61,5 @@ public class uibuildbutton : MonoBehaviour {
         selSlot.AttachWeapon(buildName);
         uiMgr.SetMoney(currMoney - (float)cost);
     }
+
 }

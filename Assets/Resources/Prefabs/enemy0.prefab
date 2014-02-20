@@ -72,6 +72,7 @@ MonoBehaviour:
   hp: 0
   atk: 0
   def: 0
+  score: 10
   killTimer: 0
   minDelay: .00999999978
   maxDelay: 3.5

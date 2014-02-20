@@ -6,6 +6,7 @@ public class earth : MonoBehaviour {
     public const int MAX_SLOT = 20;
     
     int hp;
+    public float def;
     
 	// Use this for initialization
 	void Start () {
@@ -23,6 +24,7 @@ public class earth : MonoBehaviour {
 
 
         hp = 100;
+        def = 3;
         iTween.RotateBy(gameObject, iTween.Hash("z", 90, "speed", 20, "loopType", "loop", "easeType", "linear"));
 	}
 
@@ -42,19 +44,64 @@ public class earth : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () 
-    {
+    {       
     }
 
-    void Damage(int _atk)
+    public void ApplyDamage(float _atk)
     {
-        
+        float dmg = _atk - def;
+        if( dmg <= 0 ) {
+            dmg = 1;
+        }
+        hp -= (int)dmg;
+
+        // Game Over
+        if (hp <= 0)
+        {
+            hp = 0;
+            GameOver();
+        }
     }
 
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.tag == "Enemy")
         {
-            col.gameObject.SendMessage("ApplyDamageByEarth", 100000);      
+            col.gameObject.SendMessage("ApplyDamageByEarth", 100000);
         }
     }
+
+    void GameStart()
+    {
+        enabled = true;
+    }
+
+    void GameOver()
+    {
+        GameObject[] lstBuild = GameObject.FindGameObjectsWithTag("Building");
+        for (int i = 0; i < lstBuild.Length; i++)
+        {
+            lstBuild[i].SendMessage("GameOver");
+        }
+        GameObject[] lst = GameObject.FindGameObjectsWithTag("Enemy");
+        for (int i = 0; i < lst.Length; i++)
+        {
+            lst[i].SendMessage("GameOver");
+        }
+        GameObject.FindGameObjectWithTag("Shield").SendMessage("GameOver");
+        iTween.Stop(this.gameObject);
+
+        hp = 0;
+        GameObject.Find("UIManager").SendMessage("GameOver");
+        
+
+
+        enabled = false;    // Stop working of Script
+        
+
+        //GameObject.FindGameObjectWithTag("Enemy").SendMessage("GameOver");
+        //GameObject.FindGameObjectWithTag("Shield").SendMessage("GameOver");
+        //iTween.Stop(this.gameObject);
+    }
+
 }
