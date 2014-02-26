@@ -16,6 +16,11 @@ public class buildingMiner : buildingbase
     float fLastHealingEarthUpdateTime = 1.0f;
     float fLastHealingShieldUpdateTime = 1.0f;
 
+    public buildingMiner() : base()
+    {
+        eType = BuildingType.shooter;
+    }
+
     void Start()
     {
         fLastMiningUpdateTime = Time.time;

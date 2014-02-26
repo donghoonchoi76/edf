@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
   - 60: {fileID: 6000000}
-  - 114: {fileID: 11400000}
+  - 114: {fileID: 11400002}
   m_Layer: 8
   m_Name: weapon0
   m_TagString: Building
@@ -46,7 +46,7 @@ PolygonCollider2D:
       - {x: .299999982, y: -.299999982}
       - {x: .2668387, y: .0731902644}
       - {x: .16072996, y: .300758928}
---- !u!114 &11400000
+--- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -54,7 +54,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 977f04b3eb077bd4797126367e6fcad6, type: 3}
+  m_Script: {fileID: 11500000, guid: d4f3319710c781a44907bfebea079811, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   eType: 1
@@ -63,9 +63,9 @@ MonoBehaviour:
   iDef: 0
   nextBuildingName:
   - weapon1
-  - weapon2
-  eShooterType: 0
+  - weapon3
   fShootingInterval: 2
+  numWays: 3
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_SortingLayerID: 3856920399
   m_Sprite: {fileID: 21300000, guid: 229b5d6ef9f80a94895fa91cecbea4c4, type: 3}

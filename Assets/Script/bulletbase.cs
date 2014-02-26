@@ -19,16 +19,12 @@ public class bulletbase : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        /*
-if (col.tag.Equals("Bullet"))
-        {
-            Damage(col.gameObject.GetComponent<bulletbase>().atk);
-            Destroy(col.gameObject);
-            GameObject explosion = Instantiate(particle, transform.position, transform.rotation) as GameObject;
-        }
-*/
         if (col.tag == "Enemy")
         {
+            // Hit Effect
+            GameObject particleHit = (GameObject)Resources.Load("Prefabs/CFX_Hit_A Red");
+            Instantiate(particleHit, transform.position, transform.rotation);
+
             float teki = col.gameObject.GetComponent<enemybase>().score;
             GameObject.Find("UIManager").GetComponent<uimgr>().UpdateScore(teki);
 

@@ -3,7 +3,6 @@ using System.Collections;
 
 public class enemy0 : enemybase {
     private GameObject particle;
-    private GameObject particleHit;
     private GameObject particleShield;
     private GameObject objShield;
 
@@ -26,7 +25,6 @@ public class enemy0 : enemybase {
         def = 10;
         killTimer = 1.0f;
         particle = (GameObject)Resources.Load("Prefabs/CFX_SmokeExplosion");
-        particleHit = (GameObject)Resources.Load("Prefabs/CFX_Hit_A Red");
         particleShield = (GameObject)Resources.Load("Prefabs/CFX_ElectricityBall_Alt");
         objShield = GameObject.FindGameObjectWithTag("Shield");
 
@@ -73,8 +71,6 @@ public class enemy0 : enemybase {
                                                         "time", killTimer, "easeType", "linear",
                                                         "loopType", "none", "oncomplete", "DestroyInSpace"));
         }
-        // Hit Effect
-        GameObject hit = Instantiate(particleHit, transform.position, transform.rotation) as GameObject;
     }
 
     // when enemy touch the shield, atk and hp are decreased.

@@ -78,6 +78,8 @@ public class earth : MonoBehaviour {
 
     void GameOver()
     {
+        return;
+
         GameObject[] lstBuild = GameObject.FindGameObjectsWithTag("Building");
         for (int i = 0; i < lstBuild.Length; i++)
         {

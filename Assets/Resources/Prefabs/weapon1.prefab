@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
   - 60: {fileID: 6000000}
-  - 114: {fileID: 11400000}
+  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: weapon1
   m_TagString: Building
@@ -46,7 +46,7 @@ PolygonCollider2D:
       - {x: -.299999982, y: -.299999982}
       - {x: .299999982, y: -.299999982}
       - {x: .287153304, y: .12397676}
---- !u!114 &11400000
+--- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -54,7 +54,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 977f04b3eb077bd4797126367e6fcad6, type: 3}
+  m_Script: {fileID: 11500000, guid: 87cd1f03831c57e46bbda31342083f7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   eType: 1
@@ -62,9 +62,8 @@ MonoBehaviour:
   iHP: 0
   iDef: 0
   nextBuildingName:
-  - 
-  - 
-  eShooterType: 1
+  - weapon2
+  - weapon4
   fShootingInterval: .5
 --- !u!212 &21200000
 SpriteRenderer:

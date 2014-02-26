@@ -10,9 +10,9 @@ GameObject:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
   - 60: {fileID: 6000000}
-  - 114: {fileID: 11400002}
-  m_Layer: 0
-  m_Name: weapon2
+  - 114: {fileID: 11400000}
+  m_Layer: 8
+  m_Name: weapon3
   m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40,13 +40,13 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_Poly:
     m_Paths:
-    - - {x: .137754962, y: .299999982}
-      - {x: -.132089138, y: .312246442}
-      - {x: -.299999982, y: .0828481168}
+    - - {x: -.162561059, y: .302089155}
+      - {x: -.299999982, y: .0625334978}
       - {x: -.299999982, y: -.299999982}
       - {x: .299999982, y: -.299999982}
-      - {x: .287153304, y: .12397676}
---- !u!114 &11400002
+      - {x: .2668387, y: .0731902644}
+      - {x: .16072996, y: .300758928}
+--- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -54,17 +54,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad02080fa279da64091bcad6d5328ee4, type: 3}
+  m_Script: {fileID: 11500000, guid: d4f3319710c781a44907bfebea079811, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   eType: 1
-  iPrice: 0
+  iPrice: 100
   iHP: 0
   iDef: 0
   nextBuildingName:
   - 
   - 
-  fShootingInterval: 1.5
+  fShootingInterval: 2
+  numWays: 5
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -86,7 +87,7 @@ SpriteRenderer:
   m_SortingLayer: 5
   m_SortingOrder: 0
   m_SortingLayerID: 3856920399
-  m_Sprite: {fileID: 21300000, guid: a062801a2a4483a46b8ea89b7f447c35, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8d396875ed286854e8a430a26941f7d5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

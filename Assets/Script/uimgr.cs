@@ -7,7 +7,7 @@ public class uimgr : MonoBehaviour {
     public bool bGameOver = false;
     
     string selSlotName = "";
-    float money = 100;
+    float money = 10000;
     float score = 0;
    
     bool bUpdateUIMoneyHP;
