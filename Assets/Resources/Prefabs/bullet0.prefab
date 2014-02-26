@@ -52,6 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atk: 30
+  sndExpl: {fileID: 8300000, guid: 7ec459e44c9fe8f40855b82e404efdf8, type: 3}
   fSpeed: 4
 --- !u!212 &21200000
 SpriteRenderer:

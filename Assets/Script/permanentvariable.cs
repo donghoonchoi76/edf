@@ -24,5 +24,15 @@ public static class permanentvariable {
             }
         }
     }
-	
+
+    public static void PlaySound(AudioClip clip)
+    {
+        GameObject go = new GameObject("One shot audio");
+
+        AudioSource source = go.AddComponent<AudioSource>();
+        source.clip = clip;
+        source.volume = 1.0f;
+        source.Play();
+        UnityEngine.Object.Destroy(go, clip.length);
+    }
 };
