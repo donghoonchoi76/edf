@@ -13,6 +13,7 @@ TagManager:
   - slot
   - BtnBuild
   - FxTemporaire
+  - EnemyMgr
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
@@ -66,6 +67,7 @@ TagManager:
   - name: Effect
     userID: 4
     uniqueID: 1153990939
+    locked: 0
   - name: UI
     userID: 3
     uniqueID: 3856920399

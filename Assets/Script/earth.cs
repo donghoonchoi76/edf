@@ -7,7 +7,37 @@ public class earth : MonoBehaviour {
     
     int hp;
     public float def;
-    
+
+    void GameStart()
+    {
+        enabled = true;
+    }
+
+    void GameOver()
+    {
+        GameObject[] lstBuild = GameObject.FindGameObjectsWithTag("Building");
+        for (int i = 0; i < lstBuild.Length; i++)
+        {
+            lstBuild[i].SendMessage("GameOver");
+        }
+        GameObject[] lst = GameObject.FindGameObjectsWithTag("Enemy");
+        for (int i = 0; i < lst.Length; i++)
+        {
+            lst[i].SendMessage("GameOver");
+        }
+        GameObject.FindGameObjectWithTag("Shield").SendMessage("GameOver");
+        iTween.Stop(this.gameObject);
+
+        hp = 0;
+        GameObject.Find("UIManager").SendMessage("GameOver");
+
+        enabled = false;    // Stop working of Script
+
+
+        //GameObject.FindGameObjectWithTag("Enemy").SendMessage("GameOver");
+        //GameObject.FindGameObjectWithTag("Shield").SendMessage("GameOver");
+        //iTween.Stop(this.gameObject);
+    }    
 	// Use this for initialization
 	void Start () {
         GameObject slot = GameObject.Find("slot0");
@@ -70,40 +100,4 @@ public class earth : MonoBehaviour {
             col.gameObject.SendMessage("ApplyDamageByEarth", 100000);
         }
     }
-
-    void GameStart()
-    {
-        enabled = true;
-    }
-
-    void GameOver()
-    {
-        return;
-
-        GameObject[] lstBuild = GameObject.FindGameObjectsWithTag("Building");
-        for (int i = 0; i < lstBuild.Length; i++)
-        {
-            lstBuild[i].SendMessage("GameOver");
-        }
-        GameObject[] lst = GameObject.FindGameObjectsWithTag("Enemy");
-        for (int i = 0; i < lst.Length; i++)
-        {
-            lst[i].SendMessage("GameOver");
-        }
-        GameObject.FindGameObjectWithTag("Shield").SendMessage("GameOver");
-        iTween.Stop(this.gameObject);
-
-        hp = 0;
-        GameObject.Find("UIManager").SendMessage("GameOver");
-        
-
-
-        enabled = false;    // Stop working of Script
-        
-
-        //GameObject.FindGameObjectWithTag("Enemy").SendMessage("GameOver");
-        //GameObject.FindGameObjectWithTag("Shield").SendMessage("GameOver");
-        //iTween.Stop(this.gameObject);
-    }
-
 }

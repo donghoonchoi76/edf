@@ -215,7 +215,7 @@ public class uimgr : MonoBehaviour {
         transform.FindChild("Result").FindChild("result_score").guiText.text = "Score : " + score;
 
         yield return new WaitForSeconds(1);
-        transform.FindChild("Result").FindChild("result_score").guiText.text = "Click to Start";
+        transform.FindChild("Result").FindChild("result_score").guiText.text = "Click to Stage Select";
         while (!Input.GetButtonDown("Fire1"))
         {
             yield return new WaitForFixedUpdate();
